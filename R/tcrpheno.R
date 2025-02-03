@@ -254,7 +254,8 @@ featurize_tcrs <- function(data, chain, cdr3_align="mid", cdr_only = TRUE, add_i
     if (chain %in% c("a", "ab")){ res = add_adjacent_ints(res, "TRAcdr3_p") }
     if (chain %in% c("b", "ab")){ res = add_adjacent_ints(res, "TRBcdr3_p") }
   }
-
+  save_colnames='/storage/SPEC2DIFF/tcr_analysis/scripts/pheno_tcr/columns_features_r.csv'
+  write.csv(data.frame(column_names = colnames(res)), file = save_colnames, row.names = FALSE)
   return(res)
 }
 
