@@ -254,7 +254,7 @@ featurize_tcrs <- function(data, chain, cdr3_align="mid", cdr_only = TRUE, add_i
     if (chain %in% c("a", "ab")){ res = add_adjacent_ints(res, "TRAcdr3_p") }
     if (chain %in% c("b", "ab")){ res = add_adjacent_ints(res, "TRBcdr3_p") }
   }
-  save_colnames='/storage/SPEC2DIFF/data/melanoma_TIL/tcr_features_tcrpheno.csv'
+  save_colnames='/storage/SPEC2DIFF/data/melanoma_TIL/TR_test_tcr_features_tcrpheno.csv'
   write.csv(res, file = save_colnames)
   return(res)
 }
